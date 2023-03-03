@@ -1,18 +1,17 @@
 package ivan.projects.naviweb.entity;
 
-public class User extends Person{
-    public User(int id, String login, String password, String email) {
-        super(id, login, password, email);
-    }
+import java.util.Set;
 
-    @Override
-    void showSomething() {
-        System.out.println("show User");
-    }
+public class User {
 
-//    public static void main(String[] args) {
-//
-//        System.out.println(new User(2,"@","@","@"));
-//    }
+    private Long id;
+
+    private String username;
+
+    private String password;
+
+    transient private String confirmPassword;
+
+    private Set<Role> roles;
 
 }
